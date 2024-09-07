@@ -14,6 +14,9 @@ Tauri is like Electron but lighter. You can still write code in HTML/CSS/JS and 
 
 ```sh
 yarn create tauri-app
+yarn
+yarn dev
+# http://localhost:1420/
 ```
 
 or
