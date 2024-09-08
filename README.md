@@ -38,6 +38,7 @@ yarn tauri init # and answer the prompts that follow and it'll create a folder /
 yarn tauri dev
 # if you get an error like "Error failed to get cargo metadata: No such file or directory (os error 2)" you might need to (re-)install rust, which includes cargo:
 brew install rust
+yarn tauri dev
 ```
 
 <https://tauri.app/v1/guides/getting-started/setup/integrate/>
