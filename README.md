@@ -60,9 +60,10 @@ Edit `/src-tauri/tauri.conf.json` > tauri > bundle > identifier, then run this:
 yarn tauri build
 ```
 
-- output runnable file: `/src-tauri/target/release/`[app name]
+- **output runnable file:** `/src-tauri/target/release/`[app name]
   - in my example, `/src-tauri/target/release/minimal-tauri-demo`, because `/src-tauri/tauri.conf.json` > package > productName = "minimal-tauri-demo"
-- installers will be at: `/src-tauri/target/release/bundle/`(...)
+- **installers will be at:** `/src-tauri/target/release/bundle/`(...)
+- if you want to publish it to [itch.io](https://itch.io/), you should .zip the runnable file `/src-tauri/target/release/`[app name] (otherwise the app might not run after downloading it from itch.io)
 
 ## checking setup info
 
