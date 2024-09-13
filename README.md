@@ -65,6 +65,8 @@ yarn tauri build
 - **installers will be at:** `/src-tauri/target/release/bundle/`(...)
 - if you want to publish it to [itch.io](https://itch.io/), you should .zip the runnable file `/src-tauri/target/release/`[app name] (otherwise the app might not run after downloading it from itch.io)
 
+(Aside note: although it might seem you can target for cross-platform with something like `yarn tauri build --target i686-pc-windows-msvc`, but apparently you can for now only build for the platform you're currently developing on - <https://github.com/tauri-apps/tauri/discussions/9884>)
+
 ## checking setup info
 
 ```sh
