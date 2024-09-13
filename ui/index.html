@@ -4,8 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>minimal tauri demo</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props@1.3.16/open-props.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props@1.3.16/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/hchiam/css-boilerplate@7.0.0/style.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-    <p>minimal tauri demo</p>
+    <h1>8-minute HIIT</h1>
+    <div>
+      <button id="go">GO</button>
+      <button id="stop" disabled>RESTART</button>
+      <!-- <button id="skip">SKIP</button> -->
+    </div>
+    <progress></progress>
+    <p id="timer">
+      <span>00:</span><input id="s" type="number" readonly value="00" />
+    </p>
+    <p id="text"></p>
+    <div><img id="image" src="" alt="" /></div>
+    <div id="custom">
+      <h2>Customize:</h2>
+      <p>
+        <label
+          >Audio:
+          <input id="audio" type="checkbox" checked />
+        </label>
+      </p>
+      <p>
+        <label
+          >Voice:
+          <select id="voice"></select>
+        </label>
+      </p>
+      <p id="customDescription">Announcements: "seconds,what":</p>
+      <p>
+        <textarea
+          id="exerciseNames"
+          cols="25"
+          rows="7"
+          placeholder="Add exercises here, &#10;separated by new lines."
+        ></textarea>
+      </p>
+      <p>
+        <button id="default">Use default exercises</button>
+      </p>
+    </div>
+    <p>
+      Based on:
+      <a
+        href="https://www.youtube.com/watch?v=ECxYJcnvyMw"
+        target="_blank"
+        rel="noopener noreferrer"
+        >youtube.com/watch?v=ECxYJcnvyMw</a
+      >
+    </p>
+    <script src="index.js"></script>
   </body>
 </html>

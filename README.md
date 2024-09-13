@@ -49,3 +49,27 @@ yarn tauri init # and answer the prompts that follow
 # it'll create a folder named src-tauri
 yarn tauri dev
 ```
+
+## Then to publish (i.e. export runnable/installers)
+
+<https://tauri.app/v1/guides/distribution/publishing>
+
+Edit `/src-tauri/tauri.conf.json` > tauri > bundle > identifier, then run this:
+
+```sh
+yarn tauri build
+```
+
+- output runnable file: `/src-tauri/target/release/`[app name]
+  - in my example, `/src-tauri/target/release/minimal-tauri-demo`, because `/src-tauri/tauri.conf.json` > package > productName = "minimal-tauri-demo"
+- installers will be at: `/src-tauri/target/release/bundle/`(...)
+
+## checking setup info
+
+```sh
+yarn tauri info
+```
+
+## tauri CLI documentation
+
+<https://tauri.app/v1/api/cli/>

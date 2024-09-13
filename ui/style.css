@@ -1,0 +1,117 @@
+:root {
+  --accent-colour: lime;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-colour: green;
+  }
+  * {
+    background: var(--gray-4);
+    color: var(--gray-9);
+  }
+  button {
+    color: var(--gray-2);
+  }
+  button:not(:disabled):hover,
+  input:not(:disabled):hover,
+  textarea:not(:disabled):hover,
+  button:not(:disabled):focus,
+  input:not(:disabled):focus,
+  textarea:not(:disabled):focus {
+    color: var(--gray-2);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+progress {
+  height: 5px;
+  margin-top: 0.25rem;
+
+  &::-webkit-progress-bar,
+  &::-moz-progress-bar {
+    background: var(--accent-colour);
+  }
+}
+
+#timer {
+  font-size: 5rem;
+}
+
+#timer,
+#timer span,
+#timer #s {
+  font-family: monospace;
+}
+
+#timer span {
+  color: grey;
+}
+
+#s {
+  padding: 0;
+  width: 2.5ch;
+  background: var(--accent-colour);
+  color: black;
+  line-height: 1;
+  text-align: center;
+
+  /* hide input arrows in Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* hide input arrows in Firefox */
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+#text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: var(--accent-colour);
+  color: black;
+  padding-inline: 0.5rem;
+  text-wrap: balance;
+}
+
+#custom {
+  margin-top: 3rem;
+  #customDescription {
+    font-weight: bold;
+    font-style: italic;
+  }
+  #exerciseNames {
+    white-space: pre; /* don't wrap - scrollbar instead */
+    box-shadow: var(--shadow-5);
+    outline: solid var(--accent-colour);
+    margin: 0.5rem;
+    &::selection {
+      color: white;
+      background: black;
+    }
+    &:focus,
+    &:hover {
+      box-shadow: var(--shadow-6);
+    }
+  }
+}

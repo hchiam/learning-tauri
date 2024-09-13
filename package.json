@@ -1,5 +1,12 @@
 {
   "devDependencies": {
     "@tauri-apps/cli": "1.6.1"
-  }
+  },
+  "name": "hiit",
+  "scripts": {
+    "start": "yarn tauri dev",
+    "build": "yarn tauri build",
+    "info": "yarn tauri info"
+  },
+  "version": "0.0.0"
 }
