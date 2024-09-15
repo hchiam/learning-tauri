@@ -70,8 +70,14 @@ yarn tauri build
     - <img alt="where the .app file is for mac" src="where_the_.app_file_is_for_mac.png" height="300">
   - **ALSO NOTE:** if you want to publish the `.app` file to [itch.io](https://itch.io/), you should .zip the runnable file `/src-tauri/target/release/`[app name.app] (otherwise the app might not run after downloading it from itch.io)
 
-- [mobile coming in the future](https://www.youtube.com/watch?v=cVYlih-jFwI)
 - Aside note: although it might seem you can target for cross-platform compilation with something like `yarn tauri build --target i686-pc-windows-msvc`, but apparently you can for now only build for the platform you're currently developing on - <https://github.com/tauri-apps/tauri/discussions/9884> - so you'll have to resort to things like the [official Tauri GitHub Action](https://tauri.app/v1/guides/building/cross-platform/)
+
+## [mobile coming in the future](https://www.youtube.com/watch?v=cVYlih-jFwI)
+
+- `yarn tauri ios init`
+- `yarn tauri ios dev` (emulator)
+- `yarn tauri android init`
+- `yarn tauri android dev` (emulator)
 
 ## checking setup info
 
