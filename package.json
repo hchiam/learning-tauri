@@ -4,6 +4,7 @@
   },
   "name": "hiit",
   "scripts": {
+    "dev": "yarn start",
     "start": "yarn tauri dev",
     "build": "yarn tauri build",
     "info": "yarn tauri info"
