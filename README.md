@@ -60,10 +60,14 @@ Edit `/src-tauri/tauri.conf.json` > tauri > bundle > identifier, then run this:
 yarn tauri build
 ```
 
-- **output runnable file:** `/src-tauri/target/release/`[app name]
-  - in my example, `/src-tauri/target/release/minimal-tauri-demo`, because `/src-tauri/tauri.conf.json` > package > productName = "minimal-tauri-demo"
-- **installers will be at:** `/src-tauri/target/release/bundle/`(...)
-- if you want to publish it to [itch.io](https://itch.io/), you should .zip the runnable file `/src-tauri/target/release/`[app name] (otherwise the app might not run after downloading it from itch.io)
+- according to the official docs when i last checked:
+  - **output runnable file:** `/src-tauri/target/release/`[app name]
+    - in my example, `/src-tauri/target/release/minimal-tauri-demo`, because `/src-tauri/tauri.conf.json` > package > productName = "minimal-tauri-demo"
+  - **installers will be at:** `/src-tauri/target/release/bundle/`(...)
+- but from what i found:
+  - **output runnable file (.app example for mac):** `/src-tauri/target/release/bundle/macos`[app name.app]
+    - <img alt="where the .app file is for mac" src="where_the_.app_file_is_for_mac.png" height="300">
+  - **ALSO NOTE:** if you want to publish the `.app` file to [itch.io](https://itch.io/), you should .zip the runnable file `/src-tauri/target/release/`[app name.app] (otherwise the app might not run after downloading it from itch.io)
 
 (Aside note: although it might seem you can target for cross-platform compilation with something like `yarn tauri build --target i686-pc-windows-msvc`, but apparently you can for now only build for the platform you're currently developing on - <https://github.com/tauri-apps/tauri/discussions/9884> - so you'll have to resort to things like the [official Tauri GitHub Action](https://tauri.app/v1/guides/building/cross-platform/))
 
