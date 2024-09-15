@@ -63,6 +63,7 @@ yarn tauri build
 - according to the official docs when i last checked:
   - **output runnable file:** `/src-tauri/target/release/`[app name]
     - in my example, `/src-tauri/target/release/minimal-tauri-demo`, because `/src-tauri/tauri.conf.json` > package > productName = "minimal-tauri-demo"
+    - but i found that this file also opens some terminal in the background
   - **installers will be at:** `/src-tauri/target/release/bundle/`(...)
 - but from what i found:
   - **output runnable file (.app example for mac):** `/src-tauri/target/release/bundle/macos`[app name.app]
