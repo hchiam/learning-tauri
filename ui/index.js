@@ -3,6 +3,7 @@ class Demo {
         this.a = 'a'
         this.#b = '#b'
         this.c();
+        this.#d();
     }
 
     #b = 1
