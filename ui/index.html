@@ -3,10 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class private variable tauri demo</title>
+    <title>class private method tauri demo</title>
   </head>
   <body>
-    <p>class private variable tauri demo</p>
+    <h1>class private method tauri demo</h1>
+    <p>
+      Having <code>#d()</code> present causes console log to print out this:
+    </p>
+    <p>
+      <code style="color: red; background-color: lightpink"
+        >SyntaxError: Unexpected private name #d. Cannot parse class method with
+        private name.</code
+      >
+    </p>
+    <textarea id="out"></textarea>
     <script src="index.js"></script>
   </body>
 </html>
