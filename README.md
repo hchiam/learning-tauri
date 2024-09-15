@@ -1,4 +1,4 @@
-# Learning Tauri
+# Learning [Tauri](https://github.com/tauri-apps/tauri)
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
